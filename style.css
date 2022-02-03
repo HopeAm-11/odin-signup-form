@@ -105,6 +105,53 @@ body {}
     font-size: 1rem;
 }
 
+.form {
+    display: grid;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.fieldset {
+    position: relative;
+    display: grid;
+    grid-template-columns: 30rem 30rem;
+    /* border: 1px solid rgb(24, 18, 18); */
+    margin-left: 5rem;
+}
+
+legend {
+    /* position: absolute;
+    bottom: 0;
+    top: 0; */
+
+}
+
+input {
+    display: block;
+    width: 50%;
+    padding: 5px;
+    margin: 5px 0;
+    border-radius: 4px;
+    border: 0;
+    /* add top and bottom margin */
+
+}
+
+
+/* Style the label to display next to the inputs */
+label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    border: 1px solid olivedrab;
+    text-transform: uppercase;
+
+}
+
+.input-wrapper {
+    margin-top: 2rem;
+}
+
 /* # Mobile  */
 @media only screen and (max-width: 480px) {
     .page-grid {
