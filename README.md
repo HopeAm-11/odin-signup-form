@@ -1,5 +1,5 @@
 # odin-signup-form
-a sign up form
+A responsive sign up form
 
 
 # Credits Section 
