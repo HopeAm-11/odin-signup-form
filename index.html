@@ -8,9 +8,14 @@
     <title>Sign Up </title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat:wght@300;500&family=Open+Sans:wght@300&family=Roboto+Slab:wght@300&family=Roboto:wght@100;300&family=Ubuntu:wght@300&family=Work+Sans:wght@200;400&display=swap"
+        rel="stylesheet">
 </head>
 
-<body>
+<body class="body">
     <div class="page-grid">
         <header class="header page-header">
             <figure class="figure figure-image">
@@ -25,48 +30,58 @@
         </header>
         <main class="main main-page">
             <header class="main-header">
-                <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium, similique odio voluptates
-                    exercitationem consequuntur corporis harum maxime autem ut eos eum repellendus quasi veniam tempore.
-                    Corporis possimus soluta odit consequuntur.</h2>
+                <h2>This is not a real online service! You know you need something like this in yout life to help you
+                    your deepest dreams.</h2>
+                <P>sign up now to get started.</P>
+                <p>You know you want to.</p>
             </header>
 
             <form action="#" class="form">
-                <fieldset class="fieldset">
-                    <legend>
-                        <h2>Lets do this!</h2>
-                    </legend>
-                    <div class="input-wrapper">
-                        <label for="first-name">first name</label>
-                        <input type="text" name="" id="first-name">
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="last-name">last name</label>
-                        <input type="text" name="" id="last-name">
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="email">email</label>
-                        <input type="email" name="email" id="email">
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="phone">phone number</label>
-                        <input type="tell" name="phone" id="phone">
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="pass1">password</label>
-                        <input type="password" name="password" id="pass1">
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="pass2">confirm password</label>
-                        <input type="password" name="pass-confirm" id="pass2">
-                    </div>
+                <div class="form-wrapper">
+                    <fieldset class="fieldset">
+                        <legend>
+                            <h2 class="form-title">Lets do this!</h2>
+                        </legend>
+                        <div class="input-wrapper">
+                            <label class="label" for="first-name">first name</label>
+                            <input type="text" name="first-name" id="first-name" required aria-required="true">
+                        </div>
+                        <div class="input-wrapper">
+                            <label class="label" for="last-name">last name</label>
+                            <input type="text" name="" id="last-name" required aria-required="true">
+                        </div>
+                        <div class="input-wrapper">
+                            <label class="label" for="email">email</label>
+                            <input type="email" name="email" id="email" required aria-required="true">
+                        </div>
+                        <div class="input-wrapper">
+                            <label class="label" for="phone">phone number</label>
+                            <input type="tell" name="phone" id="phone" required aria-required="true">
+                        </div>
+                        <div class="input-wrapper">
+                            <label class="label" for="pass1">password</label>
+                            <input type="password" name="password" id="pass1" class="error" onkeyup="check();" required
+                                aria-required="true">
+                            <div>
+                                <span id="error"></span>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label class="label" for="pass2">confirm password</label>
+                            <input class="error" type="password" name="pass-confirm" id="pass2" onkeyup='check();'
+                                required aria-required="true">
+                        </div>
+                </div>
+                <div class="link-login">
+                    <button id="button" class="btn" type="submit">sumbit</button>
+                    <p>already have an account <span> <a class="link-text" href="#">log in</a></span></p>
+                </div>
                 </fieldset>
-
             </form>
 
-
-            <div>3</div>
         </main>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
