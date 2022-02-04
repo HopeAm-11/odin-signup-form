@@ -3,16 +3,30 @@
     --logo-color: #fff;
     --text-color: #000;
     --error-text-color: #cc0000;
-    --logo-text:
+    --main-bg: #f4f4f4;
+    --form-bg: #fff;
+
+
 }
 
 * {
-    font-size: 100%;
-    /*16px*/
+
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
 
 }
 
-body {}
+
+
+.body>* {
+    height: 100vh;
+}
+
+body,
+button {
+    text-transform: capitalize;
+}
 
 @font-face {
     font-family: odin-font;
@@ -23,11 +37,10 @@ body {}
 .page-grid {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    grid-template-rows: 100vh;
+    /* grid-template-rows: 100vh; */
 }
 
 .page-header {
-    background-color: brown;
     position: relative;
 }
 
@@ -50,15 +63,8 @@ body {}
     background-color: rgba(2, 2, 2, 0.37);
 }
 
-/* .figure-logo {
-    width: 100%;
-    height: 100%;
-
-} */
-
 .logo {
-    /* width: 100%; */
-    max-width: 80px;
+    max-width: 7rem;
     height: auto;
 }
 
@@ -73,7 +79,7 @@ body {}
     height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
-    /* overflow: hidden; */
+
 }
 
 .hero-text {
@@ -84,72 +90,145 @@ body {}
 }
 
 .main-page {
-    background-color: burlywood;
     display: grid;
-
+    background: var(--main-bg);
 
 }
 
-.main-page>* {
-    border: 1px solid red;
-}
 
 .main-header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin-left: 5rem;
+    font-family: 'Open Sans', sans-serif;
 
-    font-size: 1rem;
 }
 
-.form {
-    display: grid;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+.main-header>* {
+    margin-top: 0.5rem;
+}
+
+
+.form-wrapper {
+    position: relative;
+    /* height: 30rem; */
+    border: 1px solid #E5E7EB;
+    -webkit-box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.16);
+    padding-bottom: 2rem;
+    background: var(--form-bg);
 }
 
 .fieldset {
-    position: relative;
     display: grid;
-    grid-template-columns: 30rem 30rem;
-    /* border: 1px solid rgb(24, 18, 18); */
+    grid-gap: 15px;
+    grid-template-columns: 40% 40%;
     margin-left: 5rem;
+    height: 100%;
+    margin-top: 5rem;
+}
+
+.form-title {
+    font-family: 'Open Sans', sans-serif;
+
+
+}
+
+.link-login {
+    margin-left: 5rem;
+    margin-top: 2rem;
+}
+
+.link-login>* {
+    margin-bottom: 1rem;
+}
+
+.btn {
+    width: 10rem;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    color: #ffffff;
+    background: #596D48;
+    border: solid #155200 1px;
+    -webkit-box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 4px 4px 2px rgba(0, 0, 0, 0.16);
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #424938;
+    text-decoration: none;
 }
 
 legend {
-    /* position: absolute;
+    position: absolute;
     bottom: 0;
-    top: 0; */
-
+    top: 5%;
 }
 
 input {
     display: block;
-    width: 50%;
+    width: 60%;
     padding: 5px;
     margin: 5px 0;
     border-radius: 4px;
-    border: 0;
-    /* add top and bottom margin */
-
+    border: 1px solid #E5E7EB;
 }
 
+input:focus {
+    border: 1px solid #1161cd;
+    -webkit-box-shadow: 6px 9px 6px -1px rgba(0, 0, 0, 0.1);
+    box-shadow: 6px 9px 6px -1px rgba(0, 0, 0, 0.1);
+}
 
-/* Style the label to display next to the inputs */
-label {
-    padding: 12px 12px 12px 0;
+.error:focus {
+    outline: none;
+    border: 1px solid #E5E7EB;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.label {
     display: inline-block;
-    border: 1px solid olivedrab;
     text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
 
 }
 
-.input-wrapper {
-    margin-top: 2rem;
+.error {
+    border: 1px solid #E5E7EB;
+}
+
+.link-text {
+    color: #424938;
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (max-device-width : 1024px) {
+
+    /* Styles */
+    .page-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 200px 1fr;
+    }
+
+    .logo_page {
+        height: auto;
+    }
+
+
 }
 
 /* # Mobile  */
@@ -159,7 +238,10 @@ label {
         grid-template-columns: 1fr;
         grid-template-rows: 300px 100vh;
     }
-}
 
-/* # Tablet
-@media only screen and (min-width: 768px) {}  */
+    .fieldset {
+
+        grid-template-columns: 1fr;
+
+    }
+}
