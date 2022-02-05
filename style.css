@@ -31,7 +31,16 @@ button {
 @font-face {
     font-family: odin-font;
     src: url(./assets/Norse-Bold.otf);
+    src: url(./assets/Norse-Bold.eot) format('embedded-opentype'),
+        /* IE 5-8 */
+        url(./assets/Norse-Bold.svg) format('svg'),
+        /* iOS */
+        url(./assets/Norse-Bold.ttf) format('truetype'),
+        /* Opera, Safari */
+        url(./assets/Norse-Bold.woff) format('woff');
+    /* FF 3.6, Chrome 5, IE9 */
 
+    /* format() explains what type of file is being referenced, allowing the browser to select the supported format. */
 }
 
 
