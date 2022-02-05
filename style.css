@@ -30,9 +30,13 @@ button {
 
 @font-face {
     font-family: odin-font;
-    src: url(/Norse-Bold.otf);
-
+    src: url(Norse-Bold.otf)
 }
+
+
+
+
+
 
 .page-grid {
     display: grid;
